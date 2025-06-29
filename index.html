@@ -2,3 +2,32 @@
 include "cabecalho.php";
 include "banner.php";
 ?>
+<?php
+include "cabecalho.php";
+include "banner.php";
+?>
+<div class="container">
+    <h2 class="display-5">Melhores avaliações</h2>
+   
+    <div class="row mt-5">
+        <?php
+       include "conexao.php";
+ 
+        $sql = "select * from produtos limit 8";
+        $resultado = mysqli_query($conexao, $sql);
+ 
+        //echo "<pre>";
+        //print_r($resultado);
+        //exit();  
+        while($linha = mysqli_fetch_assoc($resultado)){
+            ?>
+            <div class="col-3">
+            <img src=<?=$linha['foto'];?> class="img-fluid xxxx">
+            <h3><?=$linha['titulo'];?></h3>
+            <span>⭐<?=$linha['avaliacao'];?>/5</span>
+        </div>
+        <?php
+        }
+        mysqli_close($conexao)
+        ?>
+    </div>
