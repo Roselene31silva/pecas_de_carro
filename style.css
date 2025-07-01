@@ -104,6 +104,11 @@ button:hover {
     flex-wrap: wrap;
     flex-direction: row;
 }
+.lista-produtos img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+}
 
  
  

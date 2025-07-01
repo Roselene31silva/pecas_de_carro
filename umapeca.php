@@ -15,7 +15,6 @@ $nome = "";
 $categoria = "";
 $marca = "";
 $foto = "";
-$preco = "";
 // 6 - laço com as informações da peça
 while ($linha = mysqli_fetch_assoc($resultado)) {
     $nome = $linha["nome"];
@@ -23,7 +22,6 @@ while ($linha = mysqli_fetch_assoc($resultado)) {
     $categoria = $linha["categoria"];
     $marca = $linha["marca"];
     $foto = $linha["foto"];
-    $preco = $preco["preco"]
 }
 // 7 - fechar a conexão com bd
 mysqli_close($conexao);
@@ -39,7 +37,6 @@ mysqli_close($conexao);
             <p>👨‍🔧<?= $codigo ?> </p>
             <p><strong></strong> <?= $categoria ?></p>
             <p><strong></strong> <?= $marca ?></p>
-            <p><stong></stong> </p>= $preco ?></p>
         </div>
     </div>
 </div>
