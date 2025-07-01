@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <img src="img/logo.png" class="logo" height="150">
+        <img src="imagem/logo.png" class="logo" height="150">
         <h1>PEÇAS DE CARRO</h1>
         <nav>
             <a href="index.php">Home</a>

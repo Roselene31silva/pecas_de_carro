@@ -10,19 +10,19 @@ include "cabecalho.php";
         $sql = "select * from produtos";
         $resultado = mysqli_query($conexao, $sql);
         while ($linha = mysqli_fetch_assoc($resultado)) {
-            ?>
-            // Exibe cada produto em um card Bootstrap estou apendendo a fazer
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/<?php echo $linha['imagem']; ?>" class="card-img-top" alt="<?php echo $linha['nome']; ?>">
+        ?>
+            <div class="col-3 text-center mb5">
+                <div class="card" style="width: 18rem;">
+                    <img src=<?= $linha['foto']; ?> class="img-fluid capa-produtos">
+                    <h3><?php echo mb_strimwidth($linha['nome'], 0, 20, "..."); ?></h3>
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $linha['nome']; ?></h5>
-                        <p class="card-text">Preço: R$ <?php echo number_format($linha['preco'], 2, ',', '.'); ?></p>
-                        <a href="detalhes.php?id=<?php echo $linha['id']; ?>" class="btn btn-primary">Ver Detalhes</a>
+                        <h5><?= $linha['categoria']; ?></h5>
+                        <p class="card-text"><?= $linha['descricao']; ?></p>
+                        <a href="produtos.php?id=<?= $linha['id']; ?>" class="btn btn-primary">Veja detalhes</a>
                     </div>
                 </div>
             </div>
-            <?php
+        <?php
         }
         mysqli_close($conexao);
         ?>
