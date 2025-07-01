@@ -18,7 +18,7 @@ include "cabecalho.php";
                     <div class="card-body">
                         <h5><?= $linha['categoria']; ?></h5>
                         <p class="card-text"><?= $linha['descricao']; ?></p>
-                        <a href="produtos.php?id=<?= $linha['id']; ?>" class="btn btn-primary">Veja detalhes</a>
+                        <a href="umapeca.php?id=<?= $linha['id']; ?>" class="btn btn-primary">Veja detalhes</a>
                     </div>
                 </div>
             </div>
