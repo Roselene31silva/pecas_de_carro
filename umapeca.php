@@ -34,7 +34,7 @@ mysqli_close($conexao);
         </div>
         <div class="col">
             <h2 class="text-start"><?= $nome ?></h2>
-            <p>👨‍🔧<?= $codigo ?> </p>
+            <p>👨‍🔧<?= $codigo ?></p>
             <p><strong></strong> <?= $categoria ?></p>
             <p><strong></strong> <?= $marca ?></p>
         </div>
