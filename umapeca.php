@@ -17,10 +17,12 @@ $marca = "";
 $foto = "";
 // 6 - laço com as informações da peça
 while ($linha = mysqli_fetch_assoc($resultado)) {
-    $nome = $linha["nome"];
     $codigo = $linha["codigo"];
+    $nome = $linha["nome"];
     $categoria = $linha["categoria"];
     $marca = $linha["marca"];
+    $preco = $linha ["preco"];
+    $descricao = $linha["descricao"];   
     $foto = $linha["foto"];
 }
 // 7 - fechar a conexão com bd
@@ -35,8 +37,10 @@ mysqli_close($conexao);
         <div class="col">
             <h2 class="text-start"><?= $nome ?></h2>
             <p>👨‍🔧<?= $codigo ?></p>
-            <p><strong></strong> <?= $categoria ?></p>
-            <p><strong></strong> <?= $marca ?></p>
+            <p><strong>Categoria:</strong> <?= $categoria ?></p>
+            <p><strong>Marca:</strong> <?= $marca ?></p>
+            <p><strong>Preço:</strong> R$ <?= number_format($preco, 2, ',', '.') ?></p>
+            <p><strong>Descrição:</strong> <?= $descricao ?></p>   
         </div>
     </div>
 </div>

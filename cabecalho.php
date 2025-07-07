@@ -15,7 +15,6 @@
         <nav>
             <a href="index.php">Home</a>
             <a href="listadeprodutos.php">Produtos</a>
-            <a href="listadeestoque.php">Estoque</a>
             <a href="contato.php">Contato</a>
         </nav>
     </header>
