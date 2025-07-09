@@ -14,8 +14,9 @@
         <h1>PEÇAS DE CARRO</h1>
         <nav>
             <a href="index.php">Home</a>
-            <a href="listadeprodutos.php">Produtos</a>
+            <a href="pecas.php">Peças</a> 
             <a href="contato.php">Contato</a>
+            <a href="produtos.php">Produtos</a>
         </nav>
     </header>
  

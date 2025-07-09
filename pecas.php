@@ -10,18 +10,24 @@ $sql = "select * from produtos where id = $id ";
 // 4 - execução do sql
 $resultado = mysqli_query($conexao, $sql);
 // 5 - definição das variaveis
+$titulo = "";
 $codigo = "";
 $nome = "";
 $categoria = "";
 $marca = "";
+$preco = 0;
+$quantidade = 0;
+$descricao = "";
 $foto = "";
 // 6 - laço com as informações da peça
 while ($linha = mysqli_fetch_assoc($resultado)) {
+    $titulo = $linha["titulo"];
     $codigo = $linha["codigo"];
     $nome = $linha["nome"];
     $categoria = $linha["categoria"];
     $marca = $linha["marca"];
     $preco = $linha ["preco"];
+    $quantidade = $linha["quantidade"];
     $descricao = $linha["descricao"];   
     $foto = $linha["foto"];
 }
@@ -35,7 +41,7 @@ mysqli_close($conexao);
             <img src="<?= $foto ?>" class="img-fluid">
         </div>
         <div class="col">
-            <h2 class="text-start"><?= $nome ?></h2>
+            <h2 class="text-start"><?= $titulo ?></h2>
             <p>👨‍🔧<?= $codigo ?></p>
             <p><strong>Categoria:</strong> <?= $categoria ?></p>
             <p><strong>Marca:</strong> <?= $marca ?></p>
